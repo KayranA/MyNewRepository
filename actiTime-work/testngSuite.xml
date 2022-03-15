@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+		<listener class-name="extendReport.ExtentTestNGIReporterListener" />
+	</listeners>
+  <test name="ChromeTest" thread-count ="5" parallel = "classes">
+    
+    <parameter name = "browser" value = "Chrome"/>
+    <classes>
+      
+      <class name="acti123.TestClassPrac"/> 
+      <class name="acti123.TestClassNG"/> 
+      
+      
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="FireFoxTest" thread-count ="5" parallel = "classes">
+    <parameter name = "browser" value = "FireFox"/>
+    <classes>
+      
+      <class name="acti123.TestClassPrac"/> 
+      <class name="acti123.TestClassNG"/> 
+      
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="EdgeTest" thread-count ="5" parallel = "classes">
+    <parameter name = "browser" value = "Edge"/>
+    <classes>
+      
+      <class name="acti123.TestClassPrac"/>
+      <class name="acti123.TestClassNG"/> 
+      
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
